@@ -90,7 +90,7 @@ export const AddPost = () => {
       <input className="editor__downloadImgInput" type="file" id="file-input" onChange={handleChangeFile} />
       {imageUrl ? (
         <>
-          <img className="editor__img" src={process.env.REACT_APP_API_URL} alt="Uploaded" />
+          <img className="editor__img" src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="Uploaded" />
           <button className="editor__deleteImg" onClick={onClickRemoveImage}>Удалить фото</button>
         </>
       ) : <label className="editor__downloadImgLabel" htmlFor="file-input" title="Добавить фото"><i className="fa-regular fa-image"></i></label>}

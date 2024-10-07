@@ -40,7 +40,7 @@ export const FullPost = () => {
   
   return (
     <section className="post">
-      {data.imageUrl ? <img className='post__img' src={process.env.REACT_APP_API_URL} alt="holder" /> : null}
+      {data.imageUrl ? <img className='post__img' src={`${process.env.REACT_APP_API_URL}${data.imageUrl}`} alt="holder" /> : null}
       <h2 className='post__title'>{data.title}</h2>
       <Markdown className="post__text" children={data.text} />
       <div className='post__wrapperTop'>
